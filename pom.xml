@@ -45,11 +45,11 @@
         <!-- Liquibase - это независимая от базы данных библиотека с открытым исходным кодом для отслеживания,
              управления и применения изменений схемы базы данных -->
         <!-- https://mvnrepository.com/artifact/org.liquibase/liquibase-core -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase.version}</version>
-        </dependency>-->
+        </dependency>
 
         <!-- Spring Data — дополнительный удобный механизм для взаимодействия с сущностями базы данных,
              организации их в репозитории, извлечение данных, изменение -->
