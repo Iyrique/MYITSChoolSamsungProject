@@ -32,12 +32,12 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="openDate" type="NUMERIC(5,0)">
+            <column name="open" type="NUMERIC(5,0)">
                 <constraints nullable="false"/>
             </column>
 
             <column name="staff" type="NUMERIC(19,0)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
         </createTable>
 

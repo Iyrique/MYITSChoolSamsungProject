@@ -28,7 +28,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="releaseDate"
+            <column name="release"
                     type="NUMERIC(5,0)">
                 <constraints nullable="false"/>
             </column>
