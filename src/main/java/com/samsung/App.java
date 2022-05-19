@@ -25,7 +25,7 @@ public class App {
 //        List<Company> companies = context.getBean(CompanyRepository.class).findAll();
 //
 //        companies.stream().forEach(System.out::println);
-
+//
         LibDemo libraryDemo = context.getBean(LibDemo.class);
         libraryDemo.libDemo();
 

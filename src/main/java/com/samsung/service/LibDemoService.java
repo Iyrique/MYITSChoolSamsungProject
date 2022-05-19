@@ -83,20 +83,20 @@ public class LibDemoService implements LibDemo{
 
         Game game = Game.builder()
                 .name("Новая игра")
-                .author(companyRepository.findByName("Новая Компания"))
+                .company(companyRepository.findByName("Новая Компания"))
                 .releaseDate(50)
                 .genre(genreRepository.findByName("Новый Жанр"))
                 .build();
 
         gameRepository.save(game);
 
-        System.out.println("======Все книги======");
+        System.out.println("======Все игры======");
 
         for (Game game1 : gameRepository.findAll()) {
 
             System.out.println(
                     game1.getName() + " : " +
-                            game1.getAuthor().getName() + ", " +
+                            game1.getCompany().getName() + ", " +
                             game1.getGenre().getName()
             );
         }

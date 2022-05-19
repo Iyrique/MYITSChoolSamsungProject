@@ -31,7 +31,7 @@ public class Game {
 
     @ManyToOne(targetEntity = Company.class, fetch = FetchType.LAZY) // Вид связи многое к одному (у одной компании
     @JoinColumn(name = "company_id")                                 // много игр), выгружаем компанию, когда необходимо
-    private Company author;
+    private Company company;
 
     @ManyToOne(targetEntity = Genre.class, fetch = FetchType.LAZY) // Вид связи многое к одному (у одного жанра
     @JoinColumn(name = "genre_id")                                 // много игр), выгружаем жанр, когда необходимо
