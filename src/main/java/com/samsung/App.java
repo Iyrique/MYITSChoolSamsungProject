@@ -26,10 +26,10 @@ public class App {
 //
 //        companies.stream().forEach(System.out::println);
 //
-        LibDemo libraryDemo = context.getBean(LibDemo.class);
-        libraryDemo.libDemo();
-
-        context.close();
+//        LibDemo libraryDemo = context.getBean(LibDemo.class);
+//        libraryDemo.libDemo();
+//
+//        context.close();
 //        try {
 //            //Консоль для визуализации бд в браузере
 //            Console.main(args);
