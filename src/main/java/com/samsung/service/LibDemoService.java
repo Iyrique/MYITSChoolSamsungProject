@@ -5,10 +5,6 @@ import com.samsung.domain.Company;
 import com.samsung.domain.Game;
 import com.samsung.domain.Genre;
 import com.samsung.domain.Reviews;
-import com.samsung.repository.CompanyRepository;
-import com.samsung.repository.GameRepository;
-import com.samsung.repository.GenreRepository;
-import com.samsung.repository.RevievsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,10 +14,10 @@ import javax.transaction.Transactional;
 @RequiredArgsConstructor
 public class LibDemoService implements LibDemo{
 
-    private final CompanyRepository companyRepository;
-    private final GenreRepository genreRepository;
-    private final GameRepository gameRepository;
-    private final RevievsRepository revievsRepository;
+    private final CompanyService companyService;
+    private final GenreService genreService;
+    private final GameService gameService;
+    private final ReviewsService reviewsService;
 
     @Transactional
     public void companyDemo() {
@@ -33,11 +29,11 @@ public class LibDemoService implements LibDemo{
                 .staff(50)
                 .build();
 
-        companyRepository.save(newCompany);
-
+        companyService.insert(newCompany);
+//        companyService.update(1, "Ivan", "Rus", 2, 4);
         System.out.println("======Все компании======");
 
-        for (Company company : companyRepository.findAll()) {
+        for (Company company : companyService.getAll()) {
 
             System.out.println(company);
         }
@@ -53,11 +49,11 @@ public class LibDemoService implements LibDemo{
                 .name("Новый Жанр")
                 .build();
 
-        genreRepository.save(newGenre);
+//        genreService.insert(newGenre);
 
         System.out.println("======Все жанры======");
 
-        for (Genre genre : genreRepository.findAll()) {
+        for (Genre genre : genreService.getAll()) {
 
             System.out.println(genre);
         }
@@ -70,7 +66,7 @@ public class LibDemoService implements LibDemo{
 
         System.out.println("======Все отзывы======");
 
-        for (Reviews reviews : revievsRepository.findAll()) {
+        for (Reviews reviews : reviewsService.getAll()) {
 
             System.out.println(reviews.getGame().getName() + " : " + reviews.getContent());
         }
@@ -83,16 +79,15 @@ public class LibDemoService implements LibDemo{
 
         Game game = Game.builder()
                 .name("Новая игра")
-                .company(companyRepository.findByName("Новая Компания"))
+                .company(companyService.getByName("Новая Компания"))
                 .releaseDate(50)
-                .genre(genreRepository.findByName("Новый Жанр"))
+                .genre(genreService.getByName("Новый Жанр"))
                 .build();
 
-        gameRepository.save(game);
-
+//        gameService.insert("CHEF", "4A Games", "Ukraine", 555, 444, "RPG", 2020);
         System.out.println("======Все игры======");
 
-        for (Game game1 : gameRepository.findAll()) {
+        for (Game game1 : gameService.getAll()) {
 
             System.out.println(
                     game1.getName() + " : " +
