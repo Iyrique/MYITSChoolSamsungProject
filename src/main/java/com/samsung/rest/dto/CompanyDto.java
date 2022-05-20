@@ -18,9 +18,9 @@ public class CompanyDto {
 
     private String country;
 
-    private int openDate;
+    private String openDate;
 
-    private int staff;
+    private String staff;
 
     public static Company toDomainObject(CompanyDto companyDto) {
 

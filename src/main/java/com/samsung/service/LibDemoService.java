@@ -25,8 +25,8 @@ public class LibDemoService implements LibDemo{
         Company newCompany = Company.builder()
                 .name("Новая Компания")
                 .country("Страна Компании")
-                .openDate(2021)
-                .staff(50)
+                .openDate("2021")
+                .staff("50")
                 .build();
 
         companyService.insert(newCompany);
@@ -80,7 +80,7 @@ public class LibDemoService implements LibDemo{
         Game game = Game.builder()
                 .name("Новая игра")
                 .company(companyService.getByName("Новая Компания"))
-                .releaseDate(50)
+                .releaseDate("50")
                 .genre(genreService.getByName("Новый Жанр"))
                 .build();
 

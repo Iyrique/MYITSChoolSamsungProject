@@ -36,8 +36,8 @@ class CompanyRepositoryTest {
         Company expectedAuthor = Company.builder()
                 .id(4)
                 .name("Wargaming.net")
-                .openDate(1998)
-                .staff(1750)
+                .openDate("1998")
+                .staff("1750")
                 .country("Belarus")
                 .build();
 
@@ -69,22 +69,22 @@ class CompanyRepositoryTest {
                 .id(EXISTING_ID1)
                 .name(EXISTING_NAME1)
                 .country("Ukraine")
-                .staff(146)
-                .openDate(2006)
+                .staff("146")
+                .openDate("2006")
                 .build();
         Company expectedAuthor2 = Company.builder()
                 .id(EXISTING_ID2)
                 .name(EXISTING_NAME2)
                 .country("Poland")
-                .staff(800)
-                .openDate(2002)
+                .staff("800")
+                .openDate("2002")
                 .build();
         Company expectedAuthor3 = Company.builder()
                 .id(EXISTING_ID3)
                 .name(EXISTING_NAME3)
                 .country("Ukraine")
-                .staff(50)
-                .openDate(1995)
+                .staff("50")
+                .openDate("1995")
                 .build();
 
         assertThat(companyRepository.findAll().size()).isEqualTo(EXISTING_AUTHOR_COUNT);
@@ -100,8 +100,8 @@ class CompanyRepositoryTest {
                 .id(EXISTING_ID1)
                 .name(EXISTING_NAME1)
                 .country("Ukraine")
-                .staff(146)
-                .openDate(2006)
+                .staff("146")
+                .openDate("2006")
                 .build();
 
         Company actualAuthor = companyRepository.getById(EXISTING_ID1);
@@ -117,8 +117,8 @@ class CompanyRepositoryTest {
                 .id(EXISTING_ID1)
                 .name(EXISTING_NAME1)
                 .country("Ukraine")
-                .staff(146)
-                .openDate(2006)
+                .staff("146")
+                .openDate("2006")
                 .build();
 
         Company actualAuthor = companyRepository.findByName(EXISTING_NAME1);

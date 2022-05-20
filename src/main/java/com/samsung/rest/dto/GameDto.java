@@ -21,7 +21,7 @@ public class GameDto {
 
     private String name;
 
-    private int releaseDate;
+    private String releaseDate;
 
     private CompanyDto companyDto;
 

@@ -23,8 +23,8 @@ public class Company {
     private String country;
 
     @Column(name = "open")
-    private int openDate;
+    private String openDate;
 
     @Column(name = "staff")
-    private int staff;
+    private String staff;
 }

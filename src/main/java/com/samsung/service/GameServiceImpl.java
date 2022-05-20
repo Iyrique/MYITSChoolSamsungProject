@@ -24,7 +24,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     @Transactional
-    public Game insert(String nameGame, String nameAuthor, String country, int openDate, int staff, String nameGenre, int release) {
+    public Game insert(String nameGame, String nameAuthor, String country, String openDate, String staff, String nameGenre, String release) {
 
         Company company = companyRepository.findByName(nameAuthor);
         if (company == null) {
@@ -56,7 +56,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     @Transactional
-    public Game update(int id, String nameGame, String nameCompany, String country, int openDate, int release, String nameGenre) {
+    public Game update(int id, String nameGame, String nameCompany, String country, String openDate, String release, String nameGenre) {
 
         Game game = Game.builder()
                 .id(id)

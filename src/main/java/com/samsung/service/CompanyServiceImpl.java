@@ -25,7 +25,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     @Transactional
-    public Company update(int id, String newNameCompany, String country, int openDate, int staff) {
+    public Company update(int id, String newNameCompany, String country, String openDate, String staff) {
 
 
         Company author = Company.builder()

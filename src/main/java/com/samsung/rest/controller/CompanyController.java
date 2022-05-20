@@ -49,8 +49,8 @@ public class CompanyController {
             @PathVariable int id,
             @RequestParam String name,
             @RequestParam String country,
-            @RequestParam int openDate,
-            @RequestParam int staff
+            @RequestParam String openDate,
+            @RequestParam String staff
     ) {
 
         return CompanyDto.toDto(

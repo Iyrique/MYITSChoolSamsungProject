@@ -24,7 +24,7 @@ public class Game {
     private String name;
 
     @Column(name = "release")
-    private int releaseDate;
+    private String releaseDate;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "game") // Вид связи один ко многим (у одной игры много комментов)
     private List<Reviews> reviews;
