@@ -19,10 +19,10 @@ public class GameController {
     public GameDto createNewGame(
             @RequestParam String nameGame,
             @RequestParam String nameGenre, @RequestParam String release,
-            @RequestParam String nameCompany, @RequestParam String country, @RequestParam String openDate, @RequestParam String staff
+            @RequestParam String nameCompany
     ) {
 
-        Game game = gameService.insert(nameGame, nameCompany, country, openDate, staff, nameGenre, release);
+        Game game = gameService.insert(nameGame, nameCompany, nameGenre, release);
         return GameDto.toDto(game);
     }
 
@@ -40,15 +40,15 @@ public class GameController {
     @PostMapping("/game/{id}/")
     public GameDto updateBookById(
             @PathVariable int id,
-            @RequestParam String newGameName, @RequestParam String country,
-            @RequestParam String newGenreName, @RequestParam String openDate,
+            @RequestParam String newGameName,
+            @RequestParam String newGenreName,
             @RequestParam String newCompanyName, @RequestParam String release
     ) {
 
         Game game = gameService.update(
                 id,
                 newGameName,
-                newCompanyName, country, openDate, release, newGenreName
+                newCompanyName, release, newGenreName
         );
 
         return GameDto.toDto(game);

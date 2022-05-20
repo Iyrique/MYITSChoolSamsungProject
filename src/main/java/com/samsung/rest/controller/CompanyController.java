@@ -47,14 +47,11 @@ public class CompanyController {
     @PostMapping("/company/{id}/name")
     public CompanyDto updateNameById(
             @PathVariable int id,
-            @RequestParam String name,
-            @RequestParam String country,
-            @RequestParam String openDate,
-            @RequestParam String staff
+            @RequestParam String name
     ) {
 
         return CompanyDto.toDto(
-                companyService.update(id, name, country, openDate, staff)
+                companyService.update(id, name)
         );
     }
 

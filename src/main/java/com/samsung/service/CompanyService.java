@@ -8,7 +8,7 @@ public interface CompanyService {
 
     Company insert(Company company);
 
-    Company update(int id, String newNameCompany, String country, String openDate, String staff);
+    Company update(int id, String newNameCompany);
 
     List<Company> getAll();
 

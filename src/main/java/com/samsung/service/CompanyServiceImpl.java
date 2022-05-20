@@ -25,15 +25,12 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     @Transactional
-    public Company update(int id, String newNameCompany, String country, String openDate, String staff) {
+    public Company update(int id, String newNameCompany) {
 
 
         Company author = Company.builder()
                 .id(id)
                 .name(newNameCompany)
-                .openDate(openDate)
-                .country(country)
-                .staff(staff)
                 .build();
 
         return companyRepository.save(author);

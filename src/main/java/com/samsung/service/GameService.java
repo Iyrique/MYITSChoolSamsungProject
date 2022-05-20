@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface GameService {
 
-    Game insert(String name, String company, String country, String openDate, String staff, String genre, String release);
+    Game insert(String name, String company, String genre, String release);
 
-    Game update(int id, String name, String company, String country, String openDate, String release, String genre);
+    Game update(int id, String name, String company, String release, String genre);
 
     List<Game> getAll();
 
